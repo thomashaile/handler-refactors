@@ -71,3 +71,18 @@
     }
   </script>
 </head>
+
+<body>
+  <section id='user-interface'>
+    <form class='search-form'>
+      <input type='search' name='query' class='input-field' />
+      <button type='button' id='user-action'>Color</button>
+    </form>
+  </section>
+
+  <script id='listener'>
+    document.getElementById('user-action').addEventListener('click', setColorHandler);
+  </script>
+</body>
+
+</html>
