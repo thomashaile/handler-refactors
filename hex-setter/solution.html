@@ -18,6 +18,10 @@
     .inputs {
       text-align: center;
     }
+    .output_color{
+      width: 200px;
+      height: auto;
+    }
 
     .button {
       margin-top: 1%;
@@ -51,7 +55,7 @@
 
       // execute core logic
       const newStyle = 'background-color: #' + char1 + char2 + char3 + char4 + char5 + char6 + ';';
-
+    
       // display results to user
       document.getElementById('new-style').innerHTML = newStyle;
       document.body.style = newStyle;
@@ -71,22 +75,27 @@
     }
   </script>
 </head>
-
 <body>
   <section id='user-interface'>
-    <form class='search-form'>
-      <input type='text' name='first' class='input-field' />
-      <input type='text' name='second' class='input-field' />
-      <input type='text' name='third' class='input-field' />
-      <input type='text' name='fourth' class='input-field' />
-      <input type='text' name='fifth' class='input-field' />
-      <input type='text' name='sixth' class='input-field' />
-      <button type='button' id='user-action'>DuckDuckSearch</button>
+    <form class='color-selection'>
+      <input type='text' name='first' />
+      <br>
+      <input type='text' name='second' />
+      <br>
+      <input type='text' name='third' />
+      <br>
+      <input type='text' name='fourth' />
+      <br>
+      <input type='text' name='fifth' />
+      <br>
+      <input type='text' name='sixth' />
+      <br>
+      <input type='button' id='set-color' value='set background' />
     </form>
+    <div id='new-style' class='output_color'></div>
   </section>
-
   <script id='listener'>
-    document.getElementById('user-action').addEventListener('click', setColorHandler);
+    document.getElementById('set-color').addEventListener('click', setColorHandler);
   </script>
 </body>
 
